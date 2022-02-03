@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">Hello World!
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+// const result = confirm("Are you here?");
+// console.log(result);
+const numberOfFilms = +prompt('How many films you watch?', '');
+let personalMovieDB = {
+  count: numberOfFilms,
+  movie: {},
+  actors: {},
+  genres: [],
+  privat: false
 }
+const a = 'What the last film?',
+      b = 'How you like it film?',
+      c = prompt('What the last film?', ''),
+      d = prompt('How you like it film?', '');
+ personalMovieDB.movie[a] = c;
+ personalMovieDB.movie[b] = d;
+console.log(personalMovieDB);
 </script>
 
 <style>
@@ -23,6 +30,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
 }
 </style>
